@@ -4,3 +4,7 @@
     <li><%= link_to cocktail.name, cocktail_path(cocktail) %></li>
   <% end %>
 </ul>
+
+<%= simple_form_for(article) do |f| %>
+<%= f.input :photo, as: :file %>
+ end
