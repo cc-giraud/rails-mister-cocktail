@@ -1,19 +1,12 @@
-
 default: &default
   adapter: postgresql
   encoding: unicode
-  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  pool: 5
 
 development:
   <<: *default
-  database: rails_mister_cocktail_development
+  database: rails-mister-cocktail_development
 
 test:
   <<: *default
-  database: rails_mister_cocktail_test
-
-production:
-  <<: *default
-  database: rails_mister_cocktail_production
-  username: rails_mister_cocktail
-  password: <%= ENV['RAILS_MISTER_COCKTAIL_DATABASE_PASSWORD'] %>
+  database: rails-mister-cocktail_test
